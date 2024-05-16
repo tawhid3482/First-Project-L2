@@ -1,4 +1,12 @@
+import exp from 'constants';
 import { Schema, model, connect } from 'mongoose';
+
+export type Gradient ={
+    fatherName:string;
+    motherName:string;
+    fatherCon:string;
+    montherCon:string;
+}
 
 export type Student = {
   id: string;
@@ -12,4 +20,5 @@ export type Student = {
   email: string;
   avatar?: string;
   contact: string;
+  guardient:Gradient
 };
