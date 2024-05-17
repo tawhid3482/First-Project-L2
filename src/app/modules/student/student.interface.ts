@@ -1,11 +1,5 @@
 import { Schema, model, connect } from 'mongoose';
 
-export type Gradient = {
-  fatherName: string;
-  motherName: string;
-  fatherCon: string;
-  montherCon: string;
-};
 export type UserName = {
   fristName: string;
   middleName: string;
@@ -20,5 +14,4 @@ export type Student = {
   email: string;
   avatar?: string;
   contact: string;
-  guardient: Gradient;
 };
