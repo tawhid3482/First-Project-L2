@@ -1,4 +1,4 @@
-import { Schema, model, connect } from 'mongoose';
+import { Schema, model } from 'mongoose';
 import { Student, UserName } from './student/student.interface';
 
 const userNameSchema = new Schema<UserName>({
@@ -24,3 +24,5 @@ const StudentSchema = new Schema<Student>({
   avatar: { type: String },
   contact: { type: String },
 });
+
+const Student = model<Student>('Student', StudentSchema);
