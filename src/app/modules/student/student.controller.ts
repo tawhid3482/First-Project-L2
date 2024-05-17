@@ -32,7 +32,7 @@ const getAllStudents = async (req: Request, res: Response) => {
 
 const getSingleStudents = async (req: Request, res: Response) => {
   try {
-    const {studentId} = req.params;
+    const { studentId } = req.params;
     const result = await StudentServices.getSingleStudentDB(studentId);
     res.status(200).json({
       success: true,
