@@ -25,4 +25,4 @@ const StudentSchema = new Schema<Student>({
   contact: { type: String },
 });
 
-const Student = model<Student>('Student', StudentSchema);
+export const StudentModel = model<Student>('Student', StudentSchema);
