@@ -17,7 +17,10 @@ const userNameSchema = new Schema<UserName>({
 
 const StudentSchema = new Schema<Student>({
   id: { type: String },
-  name: userNameSchema,
+  name: {
+    type: userNameSchema,
+    required: true,
+  },
   gender: {
     type: String,
     enum: ['male', 'female', 'other'],
