@@ -18,11 +18,20 @@ const userNameSchema = new Schema<UserName>({
 const StudentSchema = new Schema<Student>({
   id: { type: String },
   name: userNameSchema,
-  gender: ['male', 'female'],
+  gender: {
+    type: String,
+    enum: ['male', 'female', 'other'],
+    required: true,
+  },
   birthday: { type: String },
   email: { type: String },
   avatar: { type: String },
   contact: { type: String },
+  isActive: {
+    type: String,
+    enum: ['active', 'blocked'],
+    default: 'active',
+  },
 });
 
 export const StudentModel = model<Student>('Student', StudentSchema);

@@ -14,4 +14,5 @@ export type Student = {
   email: string;
   avatar?: string;
   contact: string;
+  isActive: 'active' | 'blocked';
 };
