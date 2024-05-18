@@ -4,14 +4,14 @@ import { Student, UserName } from './student/student.interface';
 const userNameSchema = new Schema<UserName>({
   fristName: {
     type: String,
-    required: true,
+    required: [true, 'Frist name is required'],
   },
   middleName: {
     type: String,
   },
   lastName: {
     type: String,
-    required: true,
+    required: [true, 'last name required'],
   },
 });
 
@@ -19,11 +19,14 @@ const StudentSchema = new Schema<Student>({
   id: { type: String },
   name: {
     type: userNameSchema,
-    required: true,
+    required: [true, 'name is required'],
   },
   gender: {
     type: String,
-    enum: ['male', 'female', 'other'],
+    enum: {
+      values: ['male', 'female', 'other'],
+      message: 'gender is required',
+    },
     required: true,
   },
   birthday: { type: String },
