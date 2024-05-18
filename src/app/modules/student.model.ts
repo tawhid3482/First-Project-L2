@@ -25,7 +25,7 @@ const StudentSchema = new Schema<Student>({
     type: String,
     enum: {
       values: ['male', 'female', 'other'],
-      message: 'gender is required',
+      message: '{VALUE} is not supported',
     },
     required: true,
   },
