@@ -5,6 +5,7 @@ const userNameSchema = new Schema<UserName>({
   fristName: {
     type: String,
     required: [true, 'Frist name is required'],
+    maxlength: [true, 'Frist name is not more then 10 word'],
   },
   middleName: {
     type: String,
