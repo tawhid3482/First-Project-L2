@@ -14,8 +14,11 @@ const getSingleStudentDB = async (id) => {
   const result = await StudentModel.findOne({ id });
   return result;
 };
+
 export const StudentServices = {
   createStudentIntoDB,
   getAllStudentDB,
   getSingleStudentDB,
 };
+
+ami aci 
